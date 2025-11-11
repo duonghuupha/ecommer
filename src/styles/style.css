@@ -1,0 +1,86 @@
+.main-layout {
+  height: 100vh;
+
+  .layout-right {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background: #fff;
+    height: 64px;
+    z-index: 10;
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      .logo {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .icon-bell {
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 8px;
+      }
+    }
+  }
+
+  .app-sidebar {
+    .ant-menu-submenu-popup {
+      top: 0 !important; 
+    }
+  }
+
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    background: #f0f2f5;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    height: auto;
+    padding: 8px;
+
+    .header-left {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .header-right {
+      width: 100%;
+      justify-content: center;
+      gap: 12px;
+    }
+  }
+
+  .app-sidebar {
+    position: absolute;
+    z-index: 20;
+  }
+}
