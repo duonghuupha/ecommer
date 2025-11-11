@@ -7,7 +7,7 @@ const { Header } = Layout;
 const HeaderComponent = () => {
   const menu = (
     <Menu>
-      <Menu.Item key="account">Tài khoản</Menu.Item>
+      <Menu.Item key="account">Tài khoản 1</Menu.Item>
       <Menu.Item key="logout">Đăng xuất</Menu.Item>
     </Menu>
   );
